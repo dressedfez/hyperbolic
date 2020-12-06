@@ -6,15 +6,15 @@ type Hypnum interface {
 }
 
 type hypnum struct {
-	X, Y float64
+	x, y float64
 }
 
 // method that defines the addition of
 // hyperbolic numbers
 func (h hypnum) Add(summand hypnum) hypnum {
 	var result hypnum
-	result.X = h.X + summand.X
-	result.Y = h.Y + summand.Y
+	result.x = h.x + summand.x
+	result.y = h.y + summand.y
 	return result
 }
 
@@ -22,15 +22,15 @@ func (h hypnum) Add(summand hypnum) hypnum {
 // hyperbolic numbers
 func (h hypnum) Multiply(factor hypnum) hypnum {
 	var result hypnum
-	result.X = h.X*factor.X + h.Y*factor.Y
-	result.Y = h.X*factor.Y + h.Y*factor.X
+	result.x = h.x*factor.x + h.y*factor.y
+	result.y = h.x*factor.y + h.y*factor.x
 	return result
 }
 
 // creates an hyperbolic number entity
 func NewHypNum(x, y float64) hypnum {
 	return hypnum{
-		X: x,
-		Y: y,
+		x: x,
+		y: y,
 	}
 }

@@ -1,5 +1,7 @@
 package hyperbolic
 
+import "fmt"
+
 // Hypnum is the structure for hyperbolic numbers
 type Hypnum struct {
 	x, y float64
@@ -21,6 +23,12 @@ func (h Hypnum) Multiply(factor Hypnum) Hypnum {
 	result.x = h.x*factor.x + h.y*factor.y
 	result.y = h.x*factor.y + h.y*factor.x
 	return result
+}
+
+// ToString allows to print a string representation of the hyperbolic
+// numbers
+func (h Hypnum) ToString() string {
+	return fmt.Sprintf("(%f, %f)", h.x, h.y)
 }
 
 // NewHypNum creates a hyperbolic number

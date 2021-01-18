@@ -28,7 +28,7 @@ func (h Hypnum) Multiply(factor Hypnum) Hypnum {
 // ToString allows to print a string representation of the hyperbolic
 // numbers
 func (h Hypnum) ToString() string {
-	return fmt.Sprintf("(%f, %f)", h.x, h.y)
+	return fmt.Sprintf("%f, %f", h.x, h.y)
 }
 
 // NewHypNum creates a hyperbolic number

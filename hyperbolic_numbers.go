@@ -25,6 +25,20 @@ func (h Hypnum) Multiply(factor Hypnum) Hypnum {
 	return result
 }
 
+//Conjugate method allows to conjugate the hyperbolic
+//number
+func (h Hypnum) Conjugate() Hypnum {
+	var result Hypnum
+	result.y = -h.y
+	return result
+}
+
+//Modulus method allows to calculate the modulus of
+//the hyperbolic number
+func (h Hypnum) Modulus() float64 {
+	return h.x*h.x - h.y*h.y
+}
+
 // ToString allows to print a string representation of the hyperbolic
 // numbers
 func (h Hypnum) ToString() string {

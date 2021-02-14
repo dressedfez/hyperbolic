@@ -1,3 +1,3 @@
-module github.com/dressedfez/hyperbolic/v2
+module github.com/dressedfez/hyperbolic/v0
 
 go 1.14

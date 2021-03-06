@@ -20,7 +20,7 @@ func (h Hypnum) Add(summand Hypnum) Hypnum {
 // hyperbolic numbers
 func (h Hypnum) Multiply(factor Hypnum) Hypnum {
 	var result Hypnum
-	result.X = h.X*factor.Y + h.Y*factor.Y
+	result.X = h.X*factor.X + h.Y*factor.Y
 	result.Y = h.X*factor.Y + h.Y*factor.X
 	return result
 }
